@@ -13,12 +13,12 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['@emailjs/browser'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           icons: ['lucide-react'],
-          toast: ['react-toastify']
+          toast: ['react-toastify'],
+          email: ['@emailjs/browser']
         }
       }
     }
