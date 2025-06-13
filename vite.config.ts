@@ -16,12 +16,14 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          icons: ['lucide-react']
+          icons: ['lucide-react'],
+          toast: ['react-toastify']
         }
       }
     }
   },
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    include: ['react-toastify'],
+    exclude: ['lucide-react']
   },
 });

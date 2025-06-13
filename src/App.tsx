@@ -1,4 +1,6 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -19,6 +21,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
