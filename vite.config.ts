@@ -17,13 +17,14 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           icons: ['lucide-react'],
-          toast: ['react-toastify']
+          toast: ['react-toastify'],
+          email: ['@emailjs/browser']
         }
       }
     }
   },
   optimizeDeps: {
-    include: ['react-toastify'],
+    include: ['react-toastify', '@emailjs/browser'],
     exclude: ['lucide-react']
   },
 });
