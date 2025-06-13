@@ -14,7 +14,6 @@ export const sendEmail = async (formData: {
   phone: string;
   subject: string;
   message: string;
-  service: string;
 }): Promise<EmailResponse> => {
   try {
     // Validate email format
@@ -52,9 +51,8 @@ export const sendEmail = async (formData: {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
-      subject: formData.subject || 'New Contact Form Submission',
-      message: formData.message,
-      service: formData.service || 'Not specified',
+      subject: formData.message,
+      message: formData.subject || 'New Contact Form Submission', // Swapped: subject is now message
       time: currentTime,
       company_name: 'VKN & Associates',
       company_address: '5th Floor, Vertex Cute, 504, Jai Bharat Nagar, Nagarjuna Homes, Kukatpally, Hyderabad, Telangana 500090'
@@ -85,4 +83,4 @@ export const sendEmail = async (formData: {
       message: 'Failed to send message. Please try again or contact us directly at vknassociative@gmail.com'
     };
   }
-}; 
+};

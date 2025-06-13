@@ -95,11 +95,11 @@ const Services: React.FC = () => {
                 ))}
               </div>
               
-              <div className="mt-6 pt-4 border-t border-gray-100">
+              {/* <div className="mt-6 pt-4 border-t border-gray-100">
                 <button className="text-blue-600 font-medium text-sm hover:text-blue-700 transition-colors">
                   Learn More →
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

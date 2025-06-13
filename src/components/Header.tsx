@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import logo from "../Assests/Images/logo.png"
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,15 +10,15 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -43,18 +44,24 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">V</span>
-              </div>
+              <img
+                src={logo}
+                alt="VKN Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">VKN & Associates</h1>
+                <h1 className="text-xl font-bold text-gray-900">
+                  VKN & Associates
+                </h1>
                 <p className="text-sm text-gray-600">Chartered Accountants</p>
               </div>
             </div>

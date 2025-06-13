@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle, Target, Eye, Heart } from 'lucide-react';
-
+import logo from "../Assests/Images/logo.png"
 const About: React.FC = () => {
   const values = [
     {
@@ -22,7 +22,7 @@ const About: React.FC = () => {
 
   const achievements = [
     "Certified Chartered Accountants",
-    "15+ Years of Industry Experience",
+    "2+ Years of Industry Experience",
     "Expertise in Latest Tax Regulations",
     "Digital-First Approach",
     "Personalized Client Service"
@@ -87,17 +87,32 @@ const About: React.FC = () => {
             </div>
 
             {/* Team Photo Placeholder */}
-            <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-xl p-8 text-center">
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">VKN</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Professional Team</h4>
-                <p className="text-sm text-gray-600">
-                  Our experienced team of Chartered Accountants and financial experts
-                </p>
-              </div>
-            </div>
+        <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-xl p-6">
+  <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center space-y-4">
+    
+    {/* Logo & Title Row */}
+    <div className="flex items-center space-x-4">
+      <img
+        src={logo}
+        alt="VKN Logo"
+        className="w-12 h-12 rounded-lg object-cover border border-gray-200"
+      />
+      <div>
+        <h4 className="text-lg font-bold text-gray-900">VKN & Associates</h4>
+        <p className="text-xs text-gray-500">Chartered Accountants</p>
+      </div>
+    </div>
+
+    {/* Info Section */}
+    <div className="text-center">
+      <h4 className="text-md font-semibold text-gray-800 mb-1">Professional Team</h4>
+      <p className="text-sm text-gray-600">
+        Our experienced team of Chartered Accountants and financial experts.
+      </p>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
